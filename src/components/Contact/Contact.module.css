@@ -1,0 +1,35 @@
+ul, li{
+    list-style: none;
+}
+.item{
+    width: 320px;
+    border: 2px solid #6d6b6b;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+.data{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+.name, .number{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.btn{
+    padding: 10px 20px;
+    border: 2px solid #8b8989;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.btn:hover {
+    background-color: rgba(138, 134, 134, 0.759);
+}

@@ -1,0 +1,15 @@
+.container{
+    margin-bottom: 30px;
+}
+.title{
+    font-size: 24px;
+    font-weight: 600;
+   margin-bottom: 10px;
+}
+.input{
+    width: 330px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #6d6b6b;
+   border-radius: 8px;
+}
