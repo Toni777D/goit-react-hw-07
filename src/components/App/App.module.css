@@ -5,6 +5,7 @@ body{
 .app{
     padding: 20px;
     background-image: url(../../img/bacground.jpg);
+    background-size: cover;
 }
 h1{
     color: #562b98;
