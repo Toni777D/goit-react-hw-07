@@ -36,14 +36,14 @@ export default function ContactForm(){
 
         <Form className={styles.form}>
             <div className={styles.formGroup}>
-                <label>Name
-                <Field className={styles.field} type="text" name="name"></Field>
+                <label>
+                <Field className={styles.field} type="text" name="name" placeholder="Name"></Field>
                 <ErrorMessage name="name" component="div"/>
                 </label>
             </div>
             <div className={styles.formGroup}>
-                <label htmlFor="number">Number
-                <Field className={styles.field} type="phone" name="number"></Field>
+                <label htmlFor="number">
+                <Field className={styles.field} type="phone" name="number" placeholder="Number"></Field>
                 <ErrorMessage name="number" component="div" />
                 </label>
             </div>

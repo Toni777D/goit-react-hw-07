@@ -3,13 +3,14 @@ ul, li{
 }
 .item{
     width: 320px;
-    border: 2px solid #6d6b6b;
+    border: 2px solid #562b98;
     border-radius: 8px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 15px;
+    box-shadow: 2px 2px 2px #bb77f294;
 }
 .data{
     display: flex;
@@ -22,14 +23,19 @@ ul, li{
     font-weight: 600;
     margin-top: 0;
     margin-bottom: 0;
+    color: #562b98;
+
 }
 .btn{
+    background-color: #d0a2f7c4;
     padding: 10px 20px;
-    border: 2px solid #8b8989;
+    border: 2px solid #b96ef6b3;
     border-radius: 8px;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
+    color: #562b98;
+    box-shadow: 2px 2px 2px #bb77f294;
 }
 .btn:hover {
-    background-color: rgba(138, 134, 134, 0.759);
+    background-color: #ba77f2;
 }

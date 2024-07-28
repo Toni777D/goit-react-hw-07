@@ -2,5 +2,8 @@
     padding: 20px;
 }
 h1{
-    color: rgb(67, 66, 66);
+    color: #562b98;
+    font-weight: 800;
+    font-size: 40px;
+    box-shadow: 0px 2px 0px #bb77f294;
 }
