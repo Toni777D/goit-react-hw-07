@@ -29,7 +29,7 @@ return(
         {loading && <p>Loading contact ...</p>}
         {error && <p>Error: {error}</p>}
         <SearchBox />
-        <ContactList contacts={visibleContacts}/>
+        <ContactList />
     </div>
 
 );
