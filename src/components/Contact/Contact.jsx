@@ -1,12 +1,12 @@
 import { useDispatch } from 'react-redux';
 import styles from './Contact.module.css'
-import { deleteContact } from '../../redux/contactsSlice';
+import { deleteContacts } from '../../redux/contactsSlice';
 
 export default function Contact({name, number, id }){
     const dispatch = useDispatch();
 
     const handleDelete = () => {
-dispatch(deleteContact(id))
+dispatch(deleteContacts(id))
     }
 
     return(

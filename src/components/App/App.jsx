@@ -3,26 +3,34 @@ import ContactForm from '../ContactForm/ContactForm';
 import SearchBox from '../SearchBox/SearchBox';
 import ContactList from '../ContactList/ContactList';
 import styles from './App.module.css'
-import { useSelector} from 'react-redux';
-import { selectContacts } from '../../redux/contactsSlice';
-import { selectNameFilter } from '../../redux/filtersSlice';
+import { useDispatch, useSelector} from 'react-redux';
+import { selectError, selectFilteredContacts, selectLoading } from '../../redux/contactsSlice';
+import { useEffect } from 'react';
+import { fetchContacts } from '../../redux/contactsOps';
 
 
 export default function App(){
+    const dispatch = useDispatch();
+    const loading = useSelector(selectLoading);
+    const error = useSelector(selectError);
+    const visibleContacts = useSelector(selectFilteredContacts);
 
-    const contacts = useSelector(selectContacts);
-    const filter = useSelector(selectNameFilter);
 
-    const visibleContacts = contacts.filter(contact => contact.name.toLowerCase().includes(filter.toLowerCase())
-);
+    useEffect(() => {
+        dispatch(fetchContacts())
+    }, [dispatch])
+
+    
 
 return(
     <div className={styles.app}>
-<h1>Phonebook</h1>
-<ContactForm />
-<SearchBox />
-<ContactList />
-</div>
+        <h1>Phonebook</h1>
+        <ContactForm />
+        {loading && <p>Loading contact ...</p>}
+        {error && <p>Error: {error}</p>}
+        <SearchBox />
+        <ContactList contacts={visibleContacts}/>
+    </div>
 
 );
 };
